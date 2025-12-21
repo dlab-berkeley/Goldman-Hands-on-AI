@@ -4,6 +4,8 @@
 
 The materials for this workshop are located [here](https://docs.google.com/presentation/d/XXXXXX/preview?slide=id.p).
 
+Bruno's version: https://docs.google.com/presentation/d/1GHvBg7aNsoV57uvKs1H09gy8CqnX5-pLK9R1TLOoHLU/edit?usp=sharing
+
 ## Prerequisites
 
 This workshop assumes familiarity with the concepts covered in [D-Lab Demystifying AI Workshop](https://github.com/dlab-berkeley/Goldman-Demystifying-AI). While prior attendance is not strictly required, participants should have a basic understanding of how Large Language Models work and their core limitations.
