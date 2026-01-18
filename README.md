@@ -63,13 +63,17 @@ Here are other AI workshops offered by the D-Lab:
 
 * [Demystifying AI](https://github.com/dlab-berkeley/Goldman-Demystifying-AI)
 * [LLMs for Exploratory Research](https://github.com/dlab-berkeley/LLMs-Exploratory-Research)
-* [Vibe Coding](https://github.com/dlab-berkeley/vibe-coding)
+* [Vibe Coding For Research](https://github.com/dlab-berkeley/vibe-coding-for-research)
+* [Getting Started With AI](https://github.com/dlab-berkeley/Getting-Started-With-AI)
 
 ## Intermediate/Advanced Competency
 
-* [R Copilot Assisted Coding](https://github.com/dlab-berkeley/R-Copilot-Assisted-Coding-Workshop)
+* [AI-Assisted Coding in Python](https://github.com/dlab-berkeley/AI-Assisted-Coding-In-Python) 
+* [AI-Assisted Coding in R](https://github.com/dlab-berkeley/AI-Assisted-Coding-In-R)
 * [Python GPT Fundamentals](https://github.com/dlab-berkeley/Python-GPT-Fundamentals)
 
 # Contributors
 
+* [Bruno Smaniotto](https://dlab.berkeley.edu/people/bruno-smaniotto)
 * [Tom van Nuenen](https://dlab.berkeley.edu/people/tom-van-nuenen)
+  
