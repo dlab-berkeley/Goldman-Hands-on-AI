@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAIR Plan Exposure Analysis</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .chart-box { margin-bottom: 40px; }
+        h1 { text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FAIR Plan Exposure Analysis</h1>
+        
+        <div class="chart-box">
+            <canvas id="exposureTrendChart"></canvas>
+        </div>
+
+        <div class="chart-box">
+            <canvas id="topZipsChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Data derived from analysis
+        const years = ['2021', '2022', '2023', '2024', '2025'];
+        const exposureData = [160556622391, 210278307795, 284064942611, 458024035951, 693964308706];
+
+        const topZipsLabels = ["96161", "92352", "95667", "90210", "90265"];
+        const topZipsData = [9696633805, 7093005791, 7076168011, 6289718755, 5765927390];
+
+        // Format currency
+        const fmt = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact' });
+
+        // Chart 1: Total Exposure Trend
+        new Chart(document.getElementById('exposureTrendChart'), {
+            type: 'line',
+            data: {
+                labels: years,
+                datasets: [{
+                    label: 'Total Exposure ($)',
+                    data: exposureData,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1,
+                    fill: true,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Total FAIR Plan Exposure Growth (2021-2025)'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return fmt.format(context.raw);
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        ticks: {
+                            callback: function(value) {
+                                return fmt.format(value);
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 2: Top 5 Zips 2025
+        new Chart(document.getElementById('topZipsChart'), {
+            type: 'bar',
+            data: {
+                labels: topZipsLabels,
+                datasets: [{
+                    label: 'Total Exposure 2025 ($)',
+                    data: topZipsData,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(153, 102, 255, 0.6)'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Top 5 Zip Codes by Exposure (2025)'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return fmt.format(context.raw);
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        ticks: {
+                            callback: function(value) {
+                                return fmt.format(value);
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

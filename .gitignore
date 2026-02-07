@@ -1,0 +1,23 @@
+# Ignore everything
+*
+
+# Keep root files
+!.gitignore
+!README.md
+
+# Keep Bardach folder
+!Bardach/
+!Bardach/**
+
+# Keep Gemini CLI folder
+!Gemini CLI/
+!Gemini CLI/**
+
+# Always ignore these
+node_modules/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.env
+.env.local
